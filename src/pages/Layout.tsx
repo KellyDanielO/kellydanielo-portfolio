@@ -9,10 +9,10 @@ const Layout = () => {
 
           <ul className="flex gap-5">
             <li className="nav-item text-primary transition-all">
-              <Link to="/">Home</Link>
+              <Link to="/#home">Home</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
-              <Link to="/about">About</Link>
+              <Link to="/#about">About</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
               <Link to="/skills">Skills</Link>
