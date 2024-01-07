@@ -4,7 +4,7 @@ const Layout = () => {
   return (
     <>
       <div className="font-roboto bg-main px-10 text-white">
-        <nav className="py-5 px-10 flex justify-between items-center fixed top-0 left-0 right-0">
+        <nav className="py-5 px-10 flex justify-between items-center fixed top-0 left-0 right-0 backdrop-blur-xl bg-main/60">
           <h1 className="font-lemon text-2xl text-primary">Kelly Daniel</h1>
 
           <ul className="flex gap-5">
