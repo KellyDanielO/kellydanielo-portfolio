@@ -11,15 +11,15 @@ const AboutSection = () => {
       whileInView={{ opacity: 1 }}
     >
       <h1 className="text-5xl font-lemon text-primary">About Me</h1>
-      <div className="flex py-20 justify-center items-center w-full gap-20">
+      <div className="flex py-20 justify-center items-center w-full lg:w-auto gap-20 flex-col lg:flex-row">
         {/* Image Area */}
-        <div className="relative">
-          <div className="w-[30em] h-[30em] border-primary border-r-2 border-b-2 absolute -bottom-5 -right-5 z-[1]"></div>
-          <div className="w-[30em] h-[30em] border-primary border-l-2 border-t-2 absolute -top-5 -left-5 z-[1]"></div>
+        <div className="relative w-full lg:w-auto">
+          <div className="lg:w-[30em] lg:h-[30em] h-[10em] w-[10em] border-primary border-r-2 border-b-2 absolute -bottom-5 -right-5 z-[1]"></div>
+          <div className="lg:w-[30em] lg:h-[30em] h-[10em] w-[10em] border-primary border-l-2 border-t-2 absolute -top-5 -left-5 z-[1]"></div>
           <motion.img
             src={avatarImage}
             alt="avatar"
-            className="object-cover w-[30em] h-[30em]"
+            className="object-cover lg:w-[30em] lg:h-[30em] h-[40vh] w-[100%]"
             transition={{ delay: 0.5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -27,7 +27,7 @@ const AboutSection = () => {
         </div>
         {/* Text Area */}
         <motion.div
-          className="w-[34%] flex flex-col items-start justify-start gap-2"
+          className="lg:w-[34%] flex flex-col items-start justify-start gap-2"
           transition={{ delay: 0.6 }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
