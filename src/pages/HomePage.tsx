@@ -2,6 +2,10 @@ import avatarImage from "../images/avatar.jpeg";
 import TypeIt from "typeit-react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
+// import  from 'aos';
+import 'aos/dist/aos.css'; 
+// AOS.init();
+
 const Home = () => {
   return (
     <>
