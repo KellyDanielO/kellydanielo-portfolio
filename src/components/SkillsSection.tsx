@@ -1,37 +1,15 @@
 import { motion } from "framer-motion";
-interface SKillsItems {
-  skill: string;
-  level: string;
-}
 const SkillsSection = () => {
-  var skillsList: SKillsItems[] = [
-    {
-      level: "80%",
-      skill: "HTML",
-    },
-    {
-      level: "75%",
-      skill: "CSS",
-    },
-    {
-      level: "40%",
-      skill: "TailwindCSS",
-    },
-    {
-      level: "40%",
-      skill: "JavaScript",
-    },
-  ];
   return (
     <motion.section
-      id="about"
-      className="w-full py-10 flex justify-center items-center flex-col"
+      id="skills"
+      className="w-full py-20 flex justify-center items-center flex-col"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
       <h1 className="text-5xl font-lemon text-primary">Skills</h1>
-      <div className="flex py-20 justify-center items-center w-full gap-20 flex-col">
+      <div className="flex py-24 justify-center items-center w-full gap-20 flex-col">
         <div className="grid grid-cols-2 grid-rows-2 gap-x-48 gap-y-10">
           {/* Each column */}
           {/* {skillsList.map((skill) => {
@@ -147,7 +125,7 @@ const SkillsSection = () => {
             </div>
           </div>
           {/* End Python */}
-          {/* Python */}
+          {/* Django */}
           <div>
             <div className="flex justify-between items-center">
               <p>Django</p>
@@ -158,6 +136,28 @@ const SkillsSection = () => {
             </div>
           </div>
           {/* End Django */}
+          {/* MySQL */}
+          <div>
+            <div className="flex justify-between items-center">
+              <p>MySQL</p>
+              <strong>65%</strong>
+            </div>
+            <div className="h-2 w-64 bg-softColor/55">
+              <div className="h-2 w-[65%] bg-primary"></div>
+            </div>
+          </div>
+          {/* End MySQL */}
+          {/* Postgres */}
+          <div>
+            <div className="flex justify-between items-center">
+              <p>Postgres</p>
+              <strong>65%</strong>
+            </div>
+            <div className="h-2 w-64 bg-softColor/55">
+              <div className="h-2 w-[65%] bg-primary"></div>
+            </div>
+          </div>
+          {/* End Postgres */}
         </div>
       </div>
     </motion.section>
