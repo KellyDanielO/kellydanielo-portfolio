@@ -8,12 +8,12 @@ const Layout = () => {
     <>
       <ScrollToAnchor />
       <div className="font-roboto bg-main px-10 text-white">
-        <nav className="py-5 px-10 flex justify-between items-center  bg-main/60">
+        <nav className="py-5 px-2 lg:px-10 flex justify-between items-center  bg-main/60">
           <h1 className="font-lemon text-2xl text-primary">
             <Link to="/">Kelly Daniel</Link>
           </h1>
 
-          <ul className="flex gap-5">
+          <ul className="hidden gap-5 lg:flex">
             <li className="nav-item hover:text-primary transition-all">
               <Link to="/#home">Home</Link>
             </li>
