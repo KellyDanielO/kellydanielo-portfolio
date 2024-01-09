@@ -9,9 +9,6 @@ const MenuIcon = () => {
   };
 
   return (
-    // <div className={`myDiv ${isActive ? 'active' : ''}`} onClick={toggleActiveClass}>
-    //   <p>Click me to toggle the 'active' class!</p>
-    // </div>
     <>
       <div className="absolute top-6 right-2">
         <button
@@ -32,22 +29,40 @@ const MenuIcon = () => {
           isActive ? "active" : ""
         } `}
       >
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#home">Home</Link>
         </li>
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#about">About</Link>
         </li>
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#skills">Skills</Link>
         </li>
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#services">Portfolio</Link>
         </li>
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#services">Services</Link>
         </li>
-        <li className="nav-item hover:text-primary transition-all">
+        <li
+          className="nav-item hover:text-primary transition-all"
+          onClick={toggleActiveClass}
+        >
           <Link to="/#contact">Contact</Link>
         </li>
       </ul>

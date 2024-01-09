@@ -11,21 +11,6 @@ const SkillsSection = () => {
       <h1 className="text-5xl font-lemon text-primary">Skills</h1>
       <div className="flex py-24 justify-center items-center w-full gap-20 flex-col">
         <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-x-48 gap-y-10">
-          {/* Each column */}
-          {/* {skillsList.map((skill) => {
-            let skillClass: string = `h-2 w-[${skill.level}] bg-primary`;
-            return (
-              <div>
-                <div className="flex justify-between items-center">
-                  <p>{skill.skill}</p>
-                  <strong>{skill.level}</strong>
-                </div>
-                <div className="h-2 w-64 bg-softColor/55">
-                  <div className={skillClass}></div>
-                </div>
-              </div>
-            )
-          })} */}
           {/* HTML */}
           <div>
             <div className="flex justify-between items-center">
