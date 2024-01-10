@@ -1,7 +1,11 @@
 import avatarImage from "../images/avatar.jpeg";
 import TypeIt from "typeit-react";
 import { FaArrowRightLong } from "react-icons/fa6";
+
 const HeroSection = () => {
+  const openLink = (link: string) => {
+    window.location.href = link;
+  };
   return (
     <section
       className="w-full h-full flex justify-center lg:justify-around items-center flex-col-reverse md:flex-col-reverse lg:flex-row lg:py-16"
@@ -31,7 +35,7 @@ const HeroSection = () => {
           <button className="bg-primary/60 hover:bg-transparent hover:shadow-none border-2  border-primary/60 text-sm font-bold py-4 px-10 rounded-full shadow-primary/40 shadow-sm">
             Download CV
           </button>
-          <button className="border-primary/60 border-2 font-bold py-4 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
+          <button onClick={() => openLink('/portfolio')} className="border-primary/60 border-2 font-bold py-4 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
             See my work{" "}
             <FaArrowRightLong className="inline text-xl ml-1 mb-1" />
           </button>
