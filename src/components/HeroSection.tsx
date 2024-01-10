@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     <section
-      className="w-full h-screen flex justify-center lg:justify-around items-center flex-col-reverse lg:flex-row"
+      className="w-full h-full flex justify-center lg:justify-around items-center flex-col-reverse md:flex-col-reverse lg:flex-row lg:py-16"
       id="home"
     >
       <div className="flex flex-col ">

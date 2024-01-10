@@ -3,7 +3,7 @@ const SkillsSection = () => {
   return (
     <motion.section
       id="skills"
-      className="w-full py-20 flex justify-center items-center flex-col"
+      className="w-full py-20 flex justify-center items-center flex-col lg:py-32"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

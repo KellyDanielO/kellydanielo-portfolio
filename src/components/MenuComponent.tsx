@@ -51,7 +51,7 @@ const MenuIcon = () => {
           className="nav-item hover:text-primary transition-all"
           onClick={toggleActiveClass}
         >
-          <Link to="/#services">Portfolio</Link>
+          <Link to="/portfolio">Portfolio</Link>
         </li>
         <li
           className="nav-item hover:text-primary transition-all"

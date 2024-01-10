@@ -24,7 +24,7 @@ const Layout = () => {
               <Link to="/#skills">Skills</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
-              <Link to="/#porfolio">Portfolio</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
               <Link to="/#services">Services</Link>
