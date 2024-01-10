@@ -32,7 +32,7 @@ const HeroSection = () => {
           />
         </p>
         <div className="flex gap-5 my-2 flex-col lg:flex-row">
-          <button className="bg-primary/60 hover:bg-transparent hover:shadow-none border-2  border-primary/60 text-sm font-bold py-4 px-10 rounded-full shadow-primary/40 shadow-sm">
+          <button className="bg-primary/60 hover:bg-transparent hover:shadow-none border-2 hover:border-primary  border-transparent text-sm font-bold py-4 px-10 rounded-full shadow-primary/40 shadow-sm">
             Download CV
           </button>
           <button onClick={() => openLink('/portfolio')} className="border-primary/60 border-2 font-bold py-4 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">

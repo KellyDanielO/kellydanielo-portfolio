@@ -33,7 +33,7 @@ const MenuIcon = () => {
           className="nav-item hover:text-primary transition-all"
           onClick={toggleActiveClass}
         >
-          <Link to="/#home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li
           className="nav-item hover:text-primary transition-all"
@@ -63,7 +63,7 @@ const MenuIcon = () => {
           className="nav-item hover:text-primary transition-all"
           onClick={toggleActiveClass}
         >
-          <Link to="/#contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </>
