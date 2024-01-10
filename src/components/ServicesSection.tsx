@@ -5,13 +5,13 @@ const ServicesSection = () => {
   return (
     <motion.section
       id="services"
-      className="w-full flex justify-around items-center flex-col"
+      className="w-full flex justify-center items-center flex-col h-screen "
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
       <h1 className="text-5xl font-lemon text-primary mb-5 lg:mb-10">My Services</h1>
-      <div className="flex justify-around items-center lg:py-44 flex-col lg:flex-row w-full">
+      <div className="flex justify-around items-center lg:py-20 flex-col lg:flex-row w-full">
         {/* Each Service */}
         <div className="p-10 shadow-lg flex justify-center items-center gap-5 flex-col mb-10 lg:mb-0 w-[100%] lg:w-[25%]">
           <FaLaptop className="w-10 h-10 text-white" />
