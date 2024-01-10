@@ -6,9 +6,9 @@ const ContactMe = () => {
   const publicKey = "user_j9YNgCviV2OlwriYmRWPk";
   const templateId = "template_jcxprnp";
   const serviceId = "service_ek5fby6";
-//   const publicKey = process.env.EMAIL_JS_PUBLIC_KEY;
-//   const templateId = process.env.EMAIL_JS_TEMPLATE_ID;
-//   const serviceId = process.env.EMAIL_JS_SERVICE_ID;
+  //   const publicKey = process.env.EMAIL_JS_PUBLIC_KEY;
+  //   const templateId = process.env.EMAIL_JS_TEMPLATE_ID;
+  //   const serviceId = process.env.EMAIL_JS_SERVICE_ID;
 
   useEffect(() => emailjs.init(`${publicKey}`), []);
   const emailRef: LegacyRef<HTMLInputElement> = useRef<HTMLInputElement>(null);
@@ -38,11 +38,14 @@ const ContactMe = () => {
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="w-full py-20 flex justify-center items-center flex-col lg:py-32"
+      className="w-full py-20 flex justify-center items-center lg:py-32"
     >
-      <h1 className="text-3xl lg:text-5xl font-lemon text-primary">
-        Contact me
-      </h1>
+      <div>
+        <h1 className="text-3xl lg:text-5xl font-lemon text-primary">
+          Contact me
+        </h1>
+        <h3>Reach out to me, 24/7</h3>
+      </div>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col w-full justify-center items-center pt-10"

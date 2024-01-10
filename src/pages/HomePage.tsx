@@ -1,7 +1,6 @@
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import SkillsSection from "../components/SkillsSection";
-import ContactSection from "../components/ContactSection";
 import ServicesSection from "../components/ServicesSection";
 import { motion } from "framer-motion";
 const Home = () => {
@@ -15,7 +14,6 @@ const Home = () => {
       <AboutSection />
       <SkillsSection />
       <ServicesSection />
-      {/* <ContactSection /> */}
     </motion.div>
   );
 };
