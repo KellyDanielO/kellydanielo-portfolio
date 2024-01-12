@@ -1,6 +1,7 @@
 import { useRef, LegacyRef, RefObject, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ContactMe = () => {
   const publicKey = "user_j9YNgCviV2OlwriYmRWPk";
@@ -38,17 +39,25 @@ const ContactMe = () => {
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      className="w-full py-20 flex justify-center items-center lg:py-32"
+      className="w-full py-20 flex justify-center items-start flex-col lg:flex-row lg:py-32"
     >
-      <div className="w-[20%] flex justify-center flex-col">
-        <h1 className="text-3xl lg:text-5xl font-lemon text-primary">
+      <div className="w-full lg:w-[20%] flex justify-center flex-col mt-10 items-center lg:items-start">
+        <h1 className="text-3xl mb-2 lg:text-5xl font-lemon text-primary">
           Contact me
         </h1>
-        <h3>Reach out to me, 24/7</h3>
+        <h3 className="text-xl">Reach out to me, 24/7</h3>
+        <div className="flex flex-col gap-1 py-4">
+          <small className="text-sm lg:text-xl">Email</small>
+          <a href="mailto:itzkellydaniel@gmail.com" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">itzkellydaniel@gmail.com</a>
+        </div>
+        <div className="flex flex-col gap-1 py-4">
+          <small className="text-sm lg:text-xl">Call</small>
+          <a href="tel:+2348067081323" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">(+234)-806-7081-323</a>
+        </div>
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-[30%] justify-center items-center pt-10"
+        className="flex flex-col w-full lg:w-[30%] justify-center items-center pt-10"
       >
         {/* Full name */}
         <div className=" py-2 px-5 w-full  ">
@@ -58,7 +67,7 @@ const ContactMe = () => {
             id="full_name"
             ref={nameRef}
             required
-            className=" outline-none bg-[#0f030326] focus:border-b-primary border-transparent border-b-2 p-5 transition-all w-full text-sm lg:text-xl"
+            className=" outline-none bg-shade focus:border-b-primary border-transparent border-b-4 p-5 transition-all w-full text-sm lg:text-xl"
           />
         </div>
         {/* Email*/}
@@ -69,7 +78,7 @@ const ContactMe = () => {
             required
             ref={emailRef}
             id="email"
-            className=" outline-none bg-[#0f030326] focus:border-b-primary border-transparent border-b-2 p-5 transition-all w-full text-sm lg:text-xl"
+            className=" outline-none bg-shade focus:border-b-primary border-transparent border-b-4 p-5 transition-all w-full text-sm lg:text-xl"
           />
         </div>
         {/* Message*/}
@@ -79,7 +88,7 @@ const ContactMe = () => {
             required
             id="message"
             ref={messageRef}
-            className=" outline-none bg-[#0f030326] focus:border-b-primary border-transparent border-b-2 p-5 transition-all w-full text-sm lg:text-xl resize-y"
+            className=" outline-none bg-shade focus:border-b-primary border-transparent border-b-4 p-5 transition-all w-full text-sm lg:text-xl resize-y"
           ></textarea>
         </div>
         <button
