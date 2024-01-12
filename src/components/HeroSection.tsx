@@ -37,7 +37,7 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
-      <div className="lg:w-[20vh] lg:h-[20vh] w-[80%] h-[45vh] mb-10 lg:mb-0 overflow-hidden rounded-full border-primary/60 border-8">
+      <div className="lg:w-[20vh] lg:h-[20vh] w-[20vh] h-[20vh] mb-10 lg:mb-0 overflow-hidden rounded-full border-primary/60 border-8">
         <img
           src={avatarImage}
           alt="avatar"

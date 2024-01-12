@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
       <ScrollToAnchor />
-      <div className="font-roboto bg-main px-5 lg:px-10 text-blackColor bg-hero-image">
+      <div className="font-roboto bg-main px-5 lg:px-10 text-blackColor  bg-no-repeat bg-cover">
         <nav className="py-5 lg:px-10 flex justify-between relative items-start  bg-main/60 flex-col lg:flex-row ">
           <h1 className="font-lemon text-2xl text-primary">
             <Link to="/">Kelly Daniel</Link>
@@ -20,9 +20,6 @@ const Layout = () => {
             </li>
             <li className="nav-item hover:text-primary transition-all">
               <Link to="/#about">About</Link>
-            </li>
-            <li className="nav-item hover:text-primary transition-all">
-              <Link to="/#skills">Skills</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
               <Link to="/portfolio">Portfolio</Link>

@@ -45,12 +45,6 @@ const MenuIcon = () => {
           className="nav-item hover:text-primary transition-all"
           onClick={toggleActiveClass}
         >
-          <Link to="/#skills">Skills</Link>
-        </li>
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
           <Link to="/portfolio">Portfolio</Link>
         </li>
         <li
