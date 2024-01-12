@@ -5,14 +5,14 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="w-full py-10 flex justify-center items-center flex-col"
+      className="w-full py-10 px-5 flex justify-center items-center flex-col"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
       <div className="flex py-20 justify-center items-center w-full lg:w-auto gap-20 flex-col lg:flex-row">
         {/* Image Area */}
-        <div className="relative w-full lg:w-auto">
+        <div className="relative w-[90%] lg:w-auto">
           <div className="lg:w-[30em] lg:h-[30em] h-[10em] w-[10em] border-primary border-r-2 border-b-2 absolute -bottom-5 -right-5 z-[1]"></div>
           <div className="lg:w-[30em] lg:h-[30em] h-[10em] w-[10em] border-primary border-l-2 border-t-2 absolute -top-5 -left-5 z-[1]"></div>
           <motion.img

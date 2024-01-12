@@ -14,7 +14,7 @@ const ContactSection = () => {
       <h1 className="text-5xl font-lemon text-primary mb-5 lg:mb-10">
         Contact me
       </h1>
-      <div className="flex gap-20">
+      <div className="flex gap-20 justify-around w-full">
         <div className="gap-4 flex items-center justify-center">
           <FaPhone />
           <div>

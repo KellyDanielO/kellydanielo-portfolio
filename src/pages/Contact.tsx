@@ -40,7 +40,7 @@ const ContactMe = () => {
       whileInView={{ opacity: 1 }}
       className="w-full py-20 flex justify-center items-center lg:py-32"
     >
-      <div>
+      <div className="w-[20%] flex justify-center flex-col">
         <h1 className="text-3xl lg:text-5xl font-lemon text-primary">
           Contact me
         </h1>
@@ -48,10 +48,10 @@ const ContactMe = () => {
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-full justify-center items-center pt-10"
+        className="flex flex-col w-[30%] justify-center items-center pt-10"
       >
         {/* Full name */}
-        <div className=" py-2 px-5 w-full lg:w-[40%] ">
+        <div className=" py-2 px-5 w-full  ">
           <input
             type="text"
             placeholder="Full Name"
@@ -62,7 +62,7 @@ const ContactMe = () => {
           />
         </div>
         {/* Email*/}
-        <div className=" py-2 px-5 w-full lg:w-[40%] ">
+        <div className=" py-2 px-5 w-full  ">
           <input
             type="email"
             placeholder="E-mail"
@@ -73,7 +73,7 @@ const ContactMe = () => {
           />
         </div>
         {/* Message*/}
-        <div className=" py-2 px-5 w-full lg:w-[40%] ">
+        <div className=" py-2 px-5 w-full  ">
           <textarea
             placeholder="Message"
             required

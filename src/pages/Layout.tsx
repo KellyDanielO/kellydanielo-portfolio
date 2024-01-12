@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <>
       <ScrollToAnchor />
-      <div className="font-roboto bg-main text-blackColor">
+      <div className="font-roboto bg-main text-blackColor overflow-x-hidden">
         <nav className="py-5 lg:px-10 flex justify-between relative items-start  bg-shade flex-col lg:flex-row ">
           <h1 className="font-lemon text-2xl text-primary ml-5 lg:ml-0">
             <Link to="/">Kelly Daniel</Link>
