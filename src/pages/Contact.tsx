@@ -39,6 +39,7 @@ const ContactMe = () => {
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
+      id="contact"
       className="w-full py-20 flex justify-center items-start flex-col lg:flex-row lg:py-32"
     >
       <div className="w-full lg:w-[20%] flex justify-center flex-col mt-10 items-center lg:items-start">

@@ -28,7 +28,7 @@ const Layout = () => {
               <Link to="/#services">Services</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all">
-              <Link to="/contact">Contact</Link>
+              <Link to="/#contact">Contact</Link>
             </li>
           </ul>
 
