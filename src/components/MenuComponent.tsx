@@ -13,7 +13,7 @@ const MenuIcon = () => {
       <div className="absolute top-6 right-2">
         <button
           id="menu-btn"
-          className={`block hamburger lg:hidden focus:outline-none text- ${
+          className={`block hamburger lg:hidden focus:outline-none  ${
             isActive ? "open" : ""
           } `}
           onClick={toggleActiveClass}
