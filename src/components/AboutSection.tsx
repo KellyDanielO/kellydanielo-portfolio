@@ -5,12 +5,11 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="w-full py-20 flex justify-center items-center flex-col"
+      className="w-full py-10 flex justify-center items-center flex-col"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
     >
-      <h1 className="text-5xl font-lemon text-primary">About Me</h1>
       <div className="flex py-20 justify-center items-center w-full lg:w-auto gap-20 flex-col lg:flex-row">
         {/* Image Area */}
         <div className="relative w-full lg:w-auto">
@@ -32,36 +31,30 @@ const AboutSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >
+          <h1 className="text-3xl font-lemon text-primary">About Me</h1>
           <p className="text-xl mb-2">
             My name is{" "}
             <span className="text-primary/80 font-lemon">Kelly Daniel</span>{" "}
           </p>
 
           <p className="break-keep">
-            A passionate and versatile web developer with a knack for turning
-            ideas into digital reality. Based in Nigeria, I specialize in
-            creating dynamic and user-friendly web applications. My skills span
-            across various technologies, making me adept at crafting seamless
-            and engaging online experiences.
+          I am a passionate and versatile web developer based in Nigeria, dedicated to transforming ideas into digital reality. Specializing in crafting dynamic and user-friendly web applications, my skills cover a range of technologies, allowing me to create seamless and engaging online experiences. I excel in building responsive and intuitive interfaces, leveraging my front-end expertise. Additionally, my back-end proficiency with Django ensures the development of robust and scalable server-side functionalities.
           </p>
 
-          <p className="break-keep">
-            I specialize in crafting responsive and user-friendly web
-            applications. My front-end skills allow me to create intuitive and
-            visually appealing interfaces, while my back-end expertise with
-            Django ensures robust and scalable server-side functionalities.
-            Additionally, I am well-versed in mobile app development using
-            Flutter, enabling me to extend the reach of my projects across
-            multiple platforms.
-          </p>
+          {/* Skills */}
+          <div className="flex gap-2 flex-wrap">
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">HTML</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">CSS</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">JavaScript</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">PHP</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Flutter</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Python</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Django</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">MySQL</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Postgress</div>
+          </div>
 
-          <p className="break-keep">
-            In the ever-evolving field of web development, I stay up-to-date
-            with the latest trends and technologies. I believe in the power of
-            continuous learning to deliver cutting-edge solutions.
-          </p>
-
-          <button className="border-primary/60 border-2 font-bold py-4 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
+          <button className="border-primary/60 border-2 font-bold py-3 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
             Download CV
           </button>
         </motion.div>

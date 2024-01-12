@@ -2,12 +2,13 @@ import { Outlet, Link } from "react-router-dom";
 import ScrollToTopButton from "../components/ScrollToTop";
 import ScrollToAnchor from "../components/ScrollAnchor";
 import MenuIcon from "../components/MenuComponent";
+import Bg from '../images/bg.jpeg';
 
 const Layout = () => {
   return (
     <>
       <ScrollToAnchor />
-      <div className="font-roboto bg-main px-5 lg:px-10 text-white">
+      <div className="font-roboto bg-main px-5 lg:px-10 text-blackColor bg-hero-image">
         <nav className="py-5 lg:px-10 flex justify-between relative items-start  bg-main/60 flex-col lg:flex-row ">
           <h1 className="font-lemon text-2xl text-primary">
             <Link to="/">Kelly Daniel</Link>

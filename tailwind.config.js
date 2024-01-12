@@ -10,11 +10,13 @@ module.exports = {
         roboto: ['"Roboto"', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "hero-image": "url('/src/images/background.jpg')",
+        "hero-image": "url('/src/images/bg.jpeg')",
       },
       colors: {
         primary: "#00FF00",
-        main: "#272727",
+        main: "#FBF9F1",
+        blackColor: "#00000",
+        shade: "#E5E1DA",
         greyColor: "#F0F0F0",
         softColor: "#F5F5DC",
       },
