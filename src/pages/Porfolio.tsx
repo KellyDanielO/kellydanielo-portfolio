@@ -7,6 +7,7 @@ import FlutterApp2 from "../images/2-flutter -app.jpg";
 import FlutterApp3 from "../images/3-flutter -app.jpg";
 import FlutterApp4 from "../images/4-flutter -app.jpg";
 import FlutterApp5 from "../images/5-flutter -app.jpg";
+import FlutterApp6 from "../images/6-flutter -app.jpg";
 
 import { motion } from "framer-motion";
 
@@ -18,7 +19,7 @@ const PortfolioPage = () => {
   };
   return (
     <motion.section
-      className="h-full w-full flex flex-col items-center py-5"
+      className="h-full w-full flex flex-col items-center py-5 pt-24"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -37,22 +38,57 @@ const PortfolioPage = () => {
           Mobile Projects
         </h1>
         {/* Projects  box container*/}
-        <div className="w-full flex justify-around items-center flex-col lg:flex-row">
+        <div className="w-[80%]] flex justify-around items-center flex-col lg:flex-row flex-wrap">
           {/* box 1 */}
           <motion.div
             transition={{ delay: 0.5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="lg:w-[15%] mb-4 lg:mb-0 w-full flex justify-between flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl md:w-[80%]"
+            className="lg:w-[15%] mb-4 lg:mb-0 w-full flex justify-between  flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl md:w-[80%]"
           >
             <img
               src={FlutterApp1}
               alt="Onboarding screens Application"
-              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover"
+              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover rounded-xl"
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
                 Onboarding Screens
+              </h3>
+              <div className="flex justify-between w-full items-center">
+                <div className="flex gap-2 py-2">
+                  <p className="hover:text-primary hover:-translate-y-2 transition-transform cursor-pointer">
+                    Flutter
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <FaGithub
+                    className="text-xl cursor-pointer hover:text-primary"
+                    onClick={() =>
+                      openLink(
+                        "https://github.com/KellyDanielO/onboarding_screen"
+                      )
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          {/* box 1 */}
+          <motion.div
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="lg:w-[15%] mb-4 lg:mb-0 w-full flex justify-between  flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl md:w-[80%]"
+          >
+            <img
+              src={FlutterApp6}
+              alt="Onboarding screens Application"
+              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-contain"
+            />
+            <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
+              <h3 className="text-xl lg:text-2xl font-lemon text-primary">
+                Auth Screens
               </h3>
               <div className="flex justify-between w-full items-center">
                 <div className="flex gap-2 py-2">
@@ -83,7 +119,7 @@ const PortfolioPage = () => {
             <img
               src={FlutterApp2}
               alt="Fashion App Application"
-              className="cursor-default md:h-[70vh] w-full h-[50vh] lg:h-[50vh] object-cover"
+              className="cursor-default md:h-[70vh] w-full h-[50vh] lg:h-[50vh] object-cover rounded-xl"
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
@@ -108,7 +144,7 @@ const PortfolioPage = () => {
             <img
               src={FlutterApp3}
               alt="Auth Screens Application"
-              className="cursor-default  md:h-[70vh]w-full h-[50vh] lg:h-[50vh] object-cover"
+              className="cursor-default  md:h-[70vh]w-full h-[50vh] lg:h-[50vh] object-cover rounded-xl"
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
@@ -141,7 +177,7 @@ const PortfolioPage = () => {
             <img
               src={FlutterApp4}
               alt="Travel Application"
-              className="cursor-de md:h-[70vh]fault w-full h-[50vh] lg:h-[50vh] object-cover"
+              className="cursor-de md:h-[70vh]fault w-full h-[50vh] lg:h-[50vh] object-cover rounded-xl"
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
@@ -174,7 +210,7 @@ const PortfolioPage = () => {
             <img
               src={FlutterApp5}
               alt="Heart Beat Tracker Application"
-              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover"
+              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover rounded-xl"
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
