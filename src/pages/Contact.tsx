@@ -1,7 +1,6 @@
 import { useRef, LegacyRef, RefObject, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const ContactMe = () => {
   const publicKey = "user_j9YNgCviV2OlwriYmRWPk";

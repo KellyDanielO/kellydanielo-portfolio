@@ -1,11 +1,17 @@
 import avatarImage from "../images/avatar.jpeg";
 import TypeIt from "typeit-react";
-import { FaArrowRightLong, FaFacebook, FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa6";
+import {
+  FaArrowRightLong,
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
+  FaTwitter,
+} from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const openLink = (link: string) => {
-    window.location.href = link;
+    window.open(link, "_blank");
   };
   return (
     <section
@@ -13,9 +19,8 @@ const HeroSection = () => {
       id="home"
     >
       <div className="flex flex-col justify-center items-center">
-      
         <h1 className="text-4xl lg:text-4xl font-bold my-3">
-           <span className="text-primary/80 font-lemon">Kelly Daniel</span>
+          <span className="text-primary/80 font-lemon">Kelly Daniel</span>
         </h1>
         <p className="text-sm lg:text-xl">
           <TypeIt
@@ -29,16 +34,37 @@ const HeroSection = () => {
           />
         </p>
         <div className="py-2 flex gap-4">
-          <FaFacebook className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all" />
-          <FaTwitter className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all" />
-          <FaYoutube className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all" />
-          <FaInstagram className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all" />
+          <FaFacebook
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://www.facebook.com/kelly.daniel.1806253")
+            }
+          />
+          <FaTwitter
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() => openLink("https://twitter.com/kelly_daniel_o")}
+          />
+          <FaYoutube
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://www.youtube.com/@kelly_daniel_official")
+            }
+          />
+          <FaInstagram
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://www.instagram.com/kelly_daniel_official/")
+            }
+          />
         </div>
         <div className="flex gap-5 my-2 flex-col lg:flex-row">
           <button className="bg-primary/60 hover:bg-transparent text-white hover:text-black hover:shadow-none border-2 hover:border-primary  border-transparent text-sm font-bold py-2 px-10 rounded-full shadow-primary/40 shadow-sm">
             Download CV
           </button>
-          <Link to="/portfolio" className="border-primary/60 text-black hover:text-white border-2 font-bold py-2 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
+          <Link
+            to="/portfolio"
+            className="border-primary/60 text-black hover:text-white border-2 font-bold py-2 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent"
+          >
             See my work{" "}
             <FaArrowRightLong className="inline text-xl ml-1 mb-1" />
           </Link>
