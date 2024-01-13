@@ -368,12 +368,12 @@ const PortfolioPage = () => {
                   <FaGithub
                     className="text-sm lg:text-xl cursor-pointer hover:text-primary"
                     onClick={() =>
-                      openLink("https://github.com/KellyDanielO/holt")
+                      openLink("https://github.com/KellyDanielO/kellydanielo-portfolio")
                     }
                   />
                   <FaShareFromSquare
                     className="text-sm lg:text-xl cursor-pointer hover:text-primary"
-                    onClick={() => openLink("https://holt-gray.vercel.app/")}
+                    onClick={() => openLink("https://kellydanielo.vercel.app/")}
                   />
                 </div>
               </div>
