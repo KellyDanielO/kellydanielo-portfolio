@@ -41,6 +41,9 @@ const Layout = () => {
         
         <ScrollToTopButton />
         <Outlet />
+        <div className="w-full py-3 bg-primary flex justify-center items-center">
+          <strong className="text-white text-xl">&copy;2024</strong>
+        </div>
       </div>
     </>
   );

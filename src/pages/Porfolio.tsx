@@ -88,7 +88,7 @@ const PortfolioPage = () => {
             />
             <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
               <h3 className="text-xl lg:text-2xl font-lemon text-primary">
-                Auth Screens
+                Sign up Screen
               </h3>
               <div className="flex justify-between w-full items-center">
                 <div className="flex gap-2 py-2">
