@@ -1,6 +1,5 @@
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
-import SkillsSection from "../components/SkillsSection";
 import ServicesSection from "../components/ServicesSection";
 import ContactMe from "./Contact";
 import { motion } from "framer-motion";
