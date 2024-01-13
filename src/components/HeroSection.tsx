@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitter,
+  FaWhatsapp
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -38,6 +39,12 @@ const HeroSection = () => {
             className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
             onClick={() =>
               openLink("https://www.facebook.com/kelly.daniel.1806253")
+            }
+          />
+          <FaWhatsapp
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://wa.me/2348067081323")
             }
           />
           <FaTwitter
