@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitter,
+  FaGithub,
   FaWhatsapp,
   FaLinkedinIn
 } from "react-icons/fa6";
@@ -62,6 +63,12 @@ const HeroSection = () => {
             className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
             onClick={() =>
               openLink("https://wa.me/2348067081323")
+            }
+          />
+          <FaGithub
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://github.com/KellyDanielO")
             }
           />
           <FaLinkedinIn
