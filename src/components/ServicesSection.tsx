@@ -5,7 +5,7 @@ const ServicesSection = () => {
   return (
     <motion.section
       id="services"
-      className="w-full flex justify-center items-center flex-col h-full px-5 lg:px-0 lg:py-10"
+      className="w-full flex justify-center items-center flex-col h-full px-5 lg:px-0 lg:py-20"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

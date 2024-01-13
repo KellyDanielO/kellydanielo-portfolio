@@ -1,7 +1,23 @@
 import avatarImage from "../images/avatar.jpeg";
 
 import { motion } from "framer-motion";
+import { saveAs } from 'file-saver';
 const AboutSection = () => {
+  const handleDownload = () => {
+    // Replace 'path/to/your/pdf/document.pdf' with the path or URL of your PDF file
+    const pdfUrl = '../kelly-daneil-cv.pdf';
+
+    // Fetch the PDF file
+    fetch(pdfUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        // Save the PDF file using file-saver
+        saveAs(blob, 'kelly-daneil-cv.pdf');
+      })
+      .catch(error => {
+        console.error('Error fetching or saving the PDF file', error);
+      });
+  };
   return (
     <motion.section
       id="about"
@@ -54,7 +70,7 @@ const AboutSection = () => {
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Postgress</div>
           </div>
 
-          <button className="border-primary/60 border-2 font-bold py-3 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
+          <button onClick={handleDownload} className="border-primary/60 border-2 font-bold py-3 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
             Download CV
           </button>
         </motion.div>

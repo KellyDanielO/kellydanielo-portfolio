@@ -9,10 +9,26 @@ import {
   FaWhatsapp
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { saveAs } from 'file-saver';
 
 const HeroSection = () => {
   const openLink = (link: string) => {
     window.open(link, "_blank");
+  };
+  const handleDownload = () => {
+    // Replace 'path/to/your/pdf/document.pdf' with the path or URL of your PDF file
+    const pdfUrl = '../kelly-daneil-cv.pdf';
+
+    // Fetch the PDF file
+    fetch(pdfUrl)
+      .then(response => response.blob())
+      .then(blob => {
+        // Save the PDF file using file-saver
+        saveAs(blob, 'kelly-daneil-cv.pdf');
+      })
+      .catch(error => {
+        console.error('Error fetching or saving the PDF file', error);
+      });
   };
   return (
     <section
@@ -65,7 +81,7 @@ const HeroSection = () => {
           />
         </div>
         <div className="flex gap-5 my-2 flex-col lg:flex-row">
-          <button className="bg-primary/60 hover:bg-transparent text-white hover:text-black hover:shadow-none border-2 hover:border-primary  border-transparent text-sm font-bold py-2 px-10 rounded-full shadow-primary/40 shadow-sm">
+          <button onClick={handleDownload} className="bg-primary/60 hover:bg-transparent text-white hover:text-black hover:shadow-none border-2 hover:border-primary  border-transparent text-sm font-bold py-2  px-10 rounded-full shadow-primary/40 shadow-sm">
             Download CV
           </button>
           <Link
