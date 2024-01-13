@@ -40,13 +40,14 @@ code {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #00FF00;
-  width: 10px;
+  background: #c0bdb9;
+  width: 8px;
   padding: 0 10px;
-  border-radius: 5px;
+  border-radius: 15px;
+  transition: none .5s ease;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #00FF00;
+  background: #7F00FF;
 }

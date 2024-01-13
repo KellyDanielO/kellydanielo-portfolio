@@ -25,7 +25,7 @@ const ScrollToTopButton = () => {
   return !isScrolledToTop ? (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-10 right-5 w-16 h-16 bg-shade backdrop-blur-xl rounded-full cursor-pointer flex justify-center items-center z-50"
+      className="fixed bottom-10 right-5 w-16 h-16 bg-shade backdrop-blur-xl rounded-full cursor-pointer flex justify-center items-center z-10"
     >
       <FaArrowUpLong className="text-xl" />
     </button>

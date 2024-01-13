@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="w-full py-10 px-5 flex justify-center items-center flex-col"
+      className="w-full py-10 px-5 flex justify-center items-center flex-col md:w-[60%] md:mx-auto"
       transition={{ delay: 0.5 }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

@@ -4,6 +4,10 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      'md': '1024px',
+      'lg': '1025px',
+    },
     extend: {
       fontFamily: {
         lemon: ['"Lemon"', ...defaultTheme.fontFamily.sans],
@@ -13,7 +17,7 @@ module.exports = {
         "hero-image": "url('/src/images/bg.jpeg')",
       },
       colors: {
-        primary: "#00FF00",
+        primary: "#7F00FF",
         main: "#FBF9F1",
         blackColor: "#00000",
         shade: "#E5E1DA",

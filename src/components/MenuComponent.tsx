@@ -10,7 +10,7 @@ const MenuIcon = () => {
 
   return (
     <>
-      <div className="absolute top-6 right-2">
+      <div className="absolute top-6 right-2 z-20">
         <button
           id="menu-btn"
           className={`block hamburger lg:hidden focus:outline-none  ${
@@ -25,40 +25,42 @@ const MenuIcon = () => {
       </div>
 
       <ul
-        className={`hidden hm_menu md mx-auto gap-6 flex-col w-10/12 shadow-lg p-5 lg:hidden ${
+        className={`hidden hm_menu md mx-auto gap-6 flex-col bg-shade w-10/12 shadow-lg p-5  lg:hidden ${
           isActive ? "active" : ""
         } `}
       >
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
-          <Link to="/">Home</Link>
-        </li>
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
-          <Link to="/#about">About</Link>
-        </li>
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
-          <Link to="/portfolio">Portfolio</Link>
-        </li>
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
-          <Link to="/#services">Services</Link>
-        </li>
-        <li
-          className="nav-item hover:text-primary transition-all"
-          onClick={toggleActiveClass}
-        >
-          <Link to="/#contact">Contact</Link>
-        </li>
+        <div className="flex justify-center items-center flex-col h-screen gap-5 text-xl">
+          <li
+            className="nav-item hover:text-primary transition-all"
+            onClick={toggleActiveClass}
+          >
+            <Link to="/#home">Home</Link>
+          </li>
+          <li
+            className="nav-item hover:text-primary transition-all"
+            onClick={toggleActiveClass}
+          >
+            <Link to="/#about">About</Link>
+          </li>
+          <li
+            className="nav-item hover:text-primary transition-all"
+            onClick={toggleActiveClass}
+          >
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li
+            className="nav-item hover:text-primary transition-all"
+            onClick={toggleActiveClass}
+          >
+            <Link to="/#services">Services</Link>
+          </li>
+          <li
+            className="nav-item hover:text-primary transition-all"
+            onClick={toggleActiveClass}
+          >
+            <Link to="/#contact">Contact</Link>
+          </li>
+        </div>
       </ul>
     </>
   );

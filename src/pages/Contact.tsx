@@ -40,7 +40,7 @@ const ContactMe = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       id="contact"
-      className="w-full py-20 flex justify-center items-start flex-col lg:flex-row lg:py-32"
+      className="w-full py-20 flex justify-center items-center flex-col lg:flex-row lg:py-32"
     >
       <div className="w-full lg:w-[20%] flex justify-center flex-col mt-10 items-center lg:items-start">
         <h1 className="text-3xl mb-2 lg:text-5xl font-lemon text-primary">
@@ -53,12 +53,12 @@ const ContactMe = () => {
         </div>
         <div className="flex flex-col gap-1 py-4">
           <small className="text-sm lg:text-xl">Call</small>
-          <a href="tel:+2348067081323" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">(+234)-806-7081-323</a>
+          <a href="tel:+2348067081323" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">(+234)-806-708-1323</a>
         </div>
       </div>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col w-full lg:w-[30%] justify-center items-center pt-10"
+        className="flex flex-col w-full lg:w-[30%] justify-center items-center pt-10 md:w-[60%]"
       >
         {/* Full name */}
         <div className=" py-2 px-5 w-full  ">

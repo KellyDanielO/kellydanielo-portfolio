@@ -91,10 +91,19 @@
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 .hm_menu{
-  transition: all .5s;
+  position: fixed;
+  top: 0;
+  right:  0;
+  bottom: 0;
+  width: 0;
+  padding: 0 !important;
+  overflow: hidden;
+  transition: all .5s ease;
+  display: flex !important;
 }
 .hm_menu.active{
-  display: flex !important;
+  width: 100%;
+  /* display: flex !important; */
 }
 /* *{
   overflow-x: hidden;
