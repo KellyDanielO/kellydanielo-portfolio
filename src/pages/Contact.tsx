@@ -93,7 +93,7 @@ const ContactMe = () => {
           ></textarea>
         </div>
         <button
-          className="border-primary/60 border-2 font-bold py-3 px-10 rounded-xl bg-transparent shadow-sm hover:bg-primary/60 text-sm lg:text-xl transition-all hover:border-transparent"
+          className="bg-primary/60 border-2 font-bold py-3 px-10 rounded-xl  shadow-sm text-white text-sm lg:text-xl transition-all hover:border-transparent"
           type="submit"
           disabled={loading}
         >

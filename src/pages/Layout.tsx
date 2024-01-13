@@ -2,7 +2,6 @@ import { Outlet, Link } from "react-router-dom";
 import ScrollToTopButton from "../components/ScrollToTop";
 import ScrollToAnchor from "../components/ScrollAnchor";
 import MenuIcon from "../components/MenuComponent";
-import Bg from '../images/bg.jpeg';
 
 const Layout = () => {
   return (
