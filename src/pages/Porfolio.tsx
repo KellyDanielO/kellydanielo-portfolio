@@ -101,7 +101,7 @@ const PortfolioPage = () => {
                     className="text-xl cursor-pointer hover:text-primary"
                     onClick={() =>
                       openLink(
-                        "https://github.com/KellyDanielO/onboarding_screen"
+                        "https://github.com/KellyDanielO/darkthemed_auth_screen"
                       )
                     }
                   />
