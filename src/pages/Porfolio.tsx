@@ -1,5 +1,6 @@
 import WebImage1 from "../images/1-web -app.png";
 import WebImage2 from "../images/2-web -app.png";
+import WebImage3 from "../images/4-web -app.png";
 import Desktop from "../images/3-web .jpg";
 
 import FlutterApp1 from "../images/1-flutter -app.jpg";
@@ -246,7 +247,7 @@ const PortfolioPage = () => {
           Web Projects
         </motion.h1>
         {/* Projects  box container*/}
-        <div className="w-full flex justify-around items-center flex-col lg:flex-row">
+        <div className="w-full flex justify-around items-center flex-col lg:flex-row flex-wrap">
           {/* box 1 */}
           <motion.div
             transition={{ delay: 0.5 }}
@@ -318,6 +319,49 @@ const PortfolioPage = () => {
                   </p>
                   <p className="hover:text-primary text-sm lg:text-xl hover:-translate-y-2 transition-transform cursor-pointer">
                     JavaScript
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <FaGithub
+                    className="text-sm lg:text-xl cursor-pointer hover:text-primary"
+                    onClick={() =>
+                      openLink("https://github.com/KellyDanielO/holt")
+                    }
+                  />
+                  <FaShareFromSquare
+                    className="text-sm lg:text-xl cursor-pointer hover:text-primary"
+                    onClick={() => openLink("https://holt-gray.vercel.app/")}
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          {/* box 3 */}
+          <motion.div
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="w-full lg:w-[35%] flex justify-between flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl"
+          >
+            <img
+              src={WebImage3}
+              alt="Holt"
+              className="cursor-default w-full h-[20vh] lg:h-[40vh] object-cover"
+            />
+            <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
+              <h3 className="text-xl lg:text-2xl font-lemon text-primary">
+                My Porfolio
+              </h3>
+              <div className="flex justify-between w-full items-center">
+                <div className="flex gap-2 py-2">
+                  <p className="hover:text-primary text-sm lg:text-xl hover:-translate-y-2 transition-transform cursor-pointer">
+                    React
+                  </p>
+                  <p className="hover:text-primary text-sm lg:text-xl hover:-translate-y-2 transition-transform cursor-pointer">
+                    TailwindCSS
+                  </p>
+                  <p className="hover:text-primary text-sm lg:text-xl hover:-translate-y-2 transition-transform cursor-pointer">
+                    TypeScript
                   </p>
                 </div>
                 <div className="flex gap-4">
