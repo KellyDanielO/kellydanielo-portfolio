@@ -6,7 +6,8 @@ import {
   FaYoutube,
   FaInstagram,
   FaTwitter,
-  FaWhatsapp
+  FaWhatsapp,
+  FaLinkedinIn
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { saveAs } from 'file-saver';
@@ -61,6 +62,12 @@ const HeroSection = () => {
             className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
             onClick={() =>
               openLink("https://wa.me/2348067081323")
+            }
+          />
+          <FaLinkedinIn
+            className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
+            onClick={() =>
+              openLink("https://www.linkedin.com/in/kelly-daniel-4b0909212/")
             }
           />
           <FaTwitter
