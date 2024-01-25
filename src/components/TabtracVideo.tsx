@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const TabtracVideoComponent = () => {
     return <div className="flex flex-col py-5 pt-24 px-5 justify-center items-center" id="featured">
-        <h1 className="text-3xl lg:text-4xl font-lemon text-primary mb-5">Featured Project</h1>
+        <h1 className="text-3xl lg:text-4xl font-lemon text-primary mb-10">Featured Project</h1>
         <motion.section
             className="h-full w-full flex flex-col lg:flex-row justify-center gap-10 items-center"
             transition={{ delay: 0.5 }}
