@@ -21,6 +21,9 @@ const Layout = () => {
               <Link to="/#about">About</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all text-lg font-bold">
+              <Link to="/#featured">Featured</Link>
+            </li>
+            <li className="nav-item hover:text-primary transition-all text-lg font-bold">
               <Link to="/portfolio">Portfolio</Link>
             </li>
             <li className="nav-item hover:text-primary transition-all text-lg font-bold">

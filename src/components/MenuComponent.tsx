@@ -13,9 +13,8 @@ const MenuIcon = () => {
       <div className="absolute top-6 right-2 z-20">
         <button
           id="menu-btn"
-          className={`block hamburger lg:hidden focus:outline-none  ${
-            isActive ? "open" : ""
-          } `}
+          className={`block hamburger lg:hidden focus:outline-none  ${isActive ? "open" : ""
+            } `}
           onClick={toggleActiveClass}
         >
           <span className="hamburger-top"></span>
@@ -25,9 +24,8 @@ const MenuIcon = () => {
       </div>
 
       <ul
-        className={`hidden hm_menu md mx-auto gap-6 flex-col bg-shade w-10/12 shadow-lg p-5  lg:hidden ${
-          isActive ? "active" : ""
-        } `}
+        className={`hidden hm_menu md mx-auto gap-6 flex-col bg-shade w-10/12 shadow-lg p-5  lg:hidden ${isActive ? "active" : ""
+          } `}
       >
         <div className="flex justify-center items-center flex-col h-screen gap-5 text-xl">
           <li
@@ -41,6 +39,10 @@ const MenuIcon = () => {
             onClick={toggleActiveClass}
           >
             <Link to="/#about">About</Link>
+          </li>
+          <li
+            className="nav-item hover:text-primary transition-all">
+            <Link to="/#featured">Featured</Link>
           </li>
           <li
             className="nav-item hover:text-primary transition-all"
