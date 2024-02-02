@@ -9,10 +9,12 @@ import FlutterApp3 from "../images/3-flutter -app.jpg";
 import FlutterApp4 from "../images/4-flutter -app.jpg";
 import FlutterApp5 from "../images/5-flutter -app.jpg";
 import FlutterApp6 from "../images/6-flutter -app.jpg";
+import FlutterApp7 from "../images/7-flutter -app.jpg";
+import FlutterApp8 from "../images/8-flutter -app.jpg";
 
 import { motion } from "framer-motion";
 
-import { FaGithub, FaShareFromSquare } from "react-icons/fa6";
+import { FaGithub, FaShareFromSquare, FaYoutube } from "react-icons/fa6";
 
 const PortfolioPage = () => {
   const openLink = (link: string) => {
@@ -39,7 +41,7 @@ const PortfolioPage = () => {
           Mobile Projects
         </h1>
         {/* Projects  box container*/}
-        <div className="w-[80%]] flex justify-around items-center flex-col lg:flex-row flex-wrap">
+        <div className="w-[80%] flex justify-around items-center flex-col lg:flex-row flex-wrap gap-10">
           {/* box 1 */}
           <motion.div
             transition={{ delay: 0.5 }}
@@ -234,6 +236,79 @@ const PortfolioPage = () => {
               </div>
             </div>
           </motion.div>
+          {/* box 5 */}
+          <motion.div
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="lg:w-[15%] mb-4 lg:mb-0 w-full flex justify-between flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl md:w-[80%]"
+          >
+            <img
+              src={FlutterApp7}
+              alt="Dating App Design"
+              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover rounded-xl"
+            />
+            <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
+              <h3 className="text-xl lg:text-2xl font-lemon text-primary">
+                Dating App Design
+              </h3>
+              <div className="flex justify-between w-full items-center">
+                <div className="flex gap-2 py-2">
+                  <p className="hover:text-primary hover:-translate-y-2 transition-transform cursor-pointer">
+                    Flutter
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <FaGithub
+                    className="text-xl cursor-pointer hover:text-primary"
+                    onClick={() =>
+                      openLink("https://github.com/KellyDanielO/dating_app_flutter")
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          {/* box 5 */}
+          <motion.div
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="lg:w-[15%] mb-4 lg:mb-0 w-full flex justify-between flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl md:w-[80%]"
+          >
+            <img
+              src={FlutterApp8}
+              alt="News App"
+              className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[50vh] object-cover rounded-xl"
+            />
+            <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
+              <h3 className="text-xl lg:text-2xl font-lemon text-primary">
+                News App
+              </h3>
+              <div className="flex justify-between w-full items-center">
+                <div className="flex gap-2 py-2">
+                  <p className="hover:text-primary hover:-translate-y-2 transition-transform cursor-pointer">
+                    Flutter
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <FaYoutube
+                    className="text-xl cursor-pointer hover:text-primary"
+                    title="video preview"
+                    onClick={() =>
+                      openLink("https://youtu.be/0pUsZFktu_Y")
+                    }
+                  />
+                  <FaGithub
+                    className="text-xl cursor-pointer hover:text-primary"
+                    onClick={() =>
+                      openLink("https://github.com/KellyDanielO/clean_architecture_news_app")
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
       {/* Web Projects */}
@@ -420,6 +495,48 @@ const PortfolioPage = () => {
                     className="text-xl cursor-pointer hover:text-primary"
                     onClick={() =>
                       openLink("https://github.com/KellyDanielO/desktop_app/")
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      {/* Backend Projects */}
+      <div className="flex flex-col justify-around items-center w-full py-5 px-5">
+        <motion.h1
+          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-xl font-lemon text-primary mb-5 lg:mb-10"
+        >
+          Backend Project
+        </motion.h1>
+        {/* Projects  box container*/}
+        <div className="w-full flex justify-around items-center">
+          {/* box 1 */}
+          <motion.div
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="lg:w-[40%] w-full flex justify-between flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl"
+          >
+            <div className="w-full flex flex-col py-2  px-2 justify-center items-start">
+              <h3 className="text-xl lg:text-2xl font-lemon text-primary">
+                Mulitventor Backend Rest API
+              </h3>
+              <div className="flex justify-between w-full items-center">
+                <div className="flex gap-2 py-2">
+                  <p className="hover:text-primary hover:-translate-y-2 transition-transform cursor-pointer">
+                    Django
+                  </p>
+                </div>
+                <div className="flex gap-4">
+                  <FaGithub
+                    className="text-xl cursor-pointer hover:text-primary"
+                    onClick={() =>
+                      openLink("https://github.com/KellyDanielO/multivendor_api_django")
                     }
                   />
                 </div>
