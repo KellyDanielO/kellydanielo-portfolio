@@ -63,6 +63,7 @@ const AboutSection = () => {
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">CSS</div>
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">JavaScript</div>
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">PHP</div>
+            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">React</div>
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Flutter</div>
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Python</div>
             <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Django</div>
