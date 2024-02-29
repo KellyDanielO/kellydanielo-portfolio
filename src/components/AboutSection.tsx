@@ -12,7 +12,7 @@ const AboutSection = () => {
       .then(response => response.blob())
       .then(blob => {
         // Save the PDF file using file-saver
-        saveAs(blob, 'kelly-daneil-cv.pdf');
+        saveAs(blob, 'kelly-daniel-cv.pdf');
       })
       .catch(error => {
         console.error('Error fetching or saving the PDF file', error);
