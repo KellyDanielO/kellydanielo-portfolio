@@ -1,10 +1,65 @@
+import React from 'react';
 import { motion } from "framer-motion";
+import myVideo from '../videos/today_journal.mp4';
+import { FaGithub } from 'react-icons/fa6';
+import { BiLogoPlayStore } from "react-icons/bi";
+
 
 const TabtracVideoComponent = () => {
+    const openLink = (link: string) => {
+        window.open(link, "_blank");
+    };
     return <div className="flex flex-col py-5 pt-24 px-5 justify-center items-center" id="featured">
         <h1 className="text-3xl lg:text-4xl font-lemon text-primary mb-10">Featured Project</h1>
         <motion.section
             className="h-full w-full flex flex-col lg:flex-row justify-center gap-10 items-center"
+            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}>
+            <video controls className="w-full h-[25vh] lg:h-[315px] lg:w-[560px]">
+                <source src={myVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            {/* Text Area */}
+            <motion.div
+                className="lg:w-[34%] flex flex-col items-center lg:items-start justify-start gap-2"
+                transition={{ delay: 0.6 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+            >
+                <h1 className="text-3xl font-lemon text-primary">Today's Journal</h1>
+
+                <p className="break-keep">
+                    Today's Journal
+                    Is an open source application I created to keep record of your progress towards a certain goal, you create topics about what you want to do and everyday you write about your progress
+                </p>
+
+
+                {/* Skills */}
+                <div className="flex gap-10 flex-wrap justify-center items-center">
+                    <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Flutter</div>
+                    <div className="flex gap-4">
+                        <FaGithub
+                            className="text-3xl cursor-pointer hover:text-primary"
+                            title='Github'
+                            onClick={() =>
+                                openLink("https://github.com/KellyDanielO/journal")
+                            }
+                        />
+                        <BiLogoPlayStore
+                            className="text-3xl cursor-pointer hover:text-primary"
+                            title='Download on Play Store'
+                            onClick={() =>
+                                openLink("https://play.google.com/store/apps/details?id=com.tabtrac.journal")
+                            }
+                        />
+                    </div>
+                </div>
+
+            </motion.div>
+        </motion.section>
+        <motion.section
+            className="h-full w-full flex flex-col lg:flex-row justify-center gap-10 items-center mt-16"
             transition={{ delay: 0.5 }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}>

@@ -2,6 +2,7 @@ import avatarImage from "../images/avatar.jpeg";
 
 import { motion } from "framer-motion";
 import { saveAs } from 'file-saver';
+import { ReavealAnimation } from "./Reveal";
 const AboutSection = () => {
   const handleDownload = () => {
     // Replace 'path/to/your/pdf/document.pdf' with the path or URL of your PDF file
@@ -48,28 +49,31 @@ const AboutSection = () => {
           whileInView={{ opacity: 1 }}
         >
           <h1 className="text-3xl font-lemon text-primary">About Me</h1>
+
           <p className="text-xl mb-1">
             My name is{" "}
             <span className="text-primary/80 font-lemon">Kelly Daniel</span>{" "}
           </p>
-
-          <p className="break-keep">
-          I am a passionate and versatile web developer based in Nigeria, dedicated to transforming ideas into digital reality. Specializing in crafting dynamic and user-friendly web applications, my skills cover a range of technologies, allowing me to create seamless and engaging online experiences. I excel in building responsive and intuitive interfaces, leveraging my front-end expertise. Additionally, my back-end proficiency with Django ensures the development of robust and scalable server-side functionalities.
-          </p>
-
+          <ReavealAnimation>
+            <p className="break-keep">
+              I am a passionate and versatile web developer based in Nigeria, dedicated to transforming ideas into digital reality. Specializing in crafting dynamic and user-friendly web applications, my skills cover a range of technologies, allowing me to create seamless and engaging online experiences. I excel in building responsive and intuitive interfaces, leveraging my front-end expertise. Additionally, my back-end proficiency with Django ensures the development of robust and scalable server-side functionalities.
+            </p>
+          </ReavealAnimation>
           {/* Skills */}
-          <div className="flex gap-2 flex-wrap">
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">HTML</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">CSS</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">JavaScript</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">PHP</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">React</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Flutter</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Python</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Django</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">MySQL</div>
-            <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Postgress</div>
-          </div>
+          <ReavealAnimation>
+            <div className="flex gap-2 flex-wrap">
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">HTML</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">CSS</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">JavaScript</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">PHP</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">React</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Flutter</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Python</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Django</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">MySQL</div>
+              <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/30">Postgress</div>
+            </div>
+          </ReavealAnimation>
 
           <button onClick={handleDownload} className="border-primary/60 border-2 font-bold py-3 px-10 rounded-full bg-transparent shadow-sm hover:bg-primary/60 transition-all hover:border-transparent">
             Download CV
