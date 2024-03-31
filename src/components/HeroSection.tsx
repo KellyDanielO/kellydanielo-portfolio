@@ -62,7 +62,7 @@ const HeroSection = () => {
           <FaWhatsapp
             className="text-2xl text-black cursor-pointer hover:text-primary/55 transition-all"
             onClick={() =>
-              openLink("https://wa.me/2348067081323")
+              openLink("https://wa.me/22944255279")
             }
           />
           <FaGithub
