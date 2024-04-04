@@ -48,9 +48,9 @@ const TabtracVideoComponent = () => {
                         />
                         <BiLogoPlayStore
                             className="text-3xl cursor-pointer hover:text-primary"
-                            title='Download on Play Store'
+                            title='Download'
                             onClick={() =>
-                                openLink("https://play.google.com/store/apps/details?id=com.tabtrac.journal")
+                                openLink("https://todays-journal.en.uptodown.com/android")
                             }
                         />
                     </div>
