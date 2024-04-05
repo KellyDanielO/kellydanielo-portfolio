@@ -15,6 +15,7 @@ import FlutterApp8 from "../images/8-flutter -app.jpg";
 import { motion } from "framer-motion";
 
 import { FaGithub, FaShareFromSquare, FaYoutube } from "react-icons/fa6";
+import TabtracVideoComponent from "../components/TabtracVideo";
 
 const PortfolioPage = () => {
   const openLink = (link: string) => {
@@ -35,6 +36,7 @@ const PortfolioPage = () => {
       >
         My Portfolio
       </motion.h1>
+      <TabtracVideoComponent />
       {/* Mobile Projects */}
       <div className="flex flex-col justify-around items-center w-full py-5 px-5">
         <h1 className="text-xl font-lemon text-primary mb-5 lg:mb-10">
