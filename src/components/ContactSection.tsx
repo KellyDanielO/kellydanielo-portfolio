@@ -19,7 +19,7 @@ const ContactSection = () => {
           <FaPhone />
           <div>
             <p>Call</p>
-            <Link to='tel:+2348067081323' >+2348067081323</Link>
+            <Link to='tel:+22944255279' >+22944255279</Link>
           </div>
         </div>
         <div className="gap-4 flex items-center justify-center">
