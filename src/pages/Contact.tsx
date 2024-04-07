@@ -52,7 +52,7 @@ const ContactMe = () => {
         </div>
         <div className="flex flex-col gap-1 py-4">
           <small className="text-sm lg:text-xl">Call</small>
-          <a href="tel:+2348067081323" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">(+234)-806-708-1323</a>
+          <a href="tel:+22944255279" className="text-xl lg:text-2xl font-bold cursor-pointer hover:text-primary/80" target="__blank">(+229)-44-255-279</a>
         </div>
       </div>
       <form
