@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: #37e602;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +16,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+*{
+  scroll-behavior: smooth;
+  transition: .5s all ease-in-out;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +34,41 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.container-wrapper{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav-links{
+  position: relative;
+  transition: 1s all ease;
+}
+.nav-links.active{
+  color: var(--primary) !important;
+}
+.nav-links.active::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: 1s all ease-in-out;
+  border-radius: 50px;
+  width: 100%;
+}
+.nav-links::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary);
+  transition: .5s all ease-in-out;
+  border-radius: 50px;
+  width: 0%;
+}
+.nav-links:hover::before{
+  width: 100%;
 }
