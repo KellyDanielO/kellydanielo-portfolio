@@ -25,7 +25,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet" />
 
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        
+        {children}
+      </body>
     </html>
   );
 }

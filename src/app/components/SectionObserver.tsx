@@ -27,7 +27,7 @@ const useIntersectionObserver = (setActiveSection: (id: string) => void) => {
 
         const sectionElements = document.querySelectorAll('section[id]');
         sectionElements.forEach((section) => observer.observe(section));
-
+        
         return () => {
             observer.disconnect();
         };
