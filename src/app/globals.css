@@ -142,3 +142,28 @@ body {
   visibility: visible;
   /* display: flex !important; */
 }
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c0bdb9c0;
+  width: 8px;
+  padding: 0 10px;
+  border-radius: 15px;
+  transition: none .5s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #37e602;
+}

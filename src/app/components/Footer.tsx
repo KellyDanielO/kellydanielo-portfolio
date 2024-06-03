@@ -7,8 +7,8 @@ const FooterComponent = () => {
     };
     return <>
 
-        <footer className="container-wrapper py-5  flex justify-between items-start ">
-            <div className="w-[25%] flex flex-col items-start gap-2">
+        <footer className="container-wrapper py-5  flex justify-between items-start flex-col lg:flex-row gap-5 pb-10">
+            <div className="lg:w-[25%] flex flex-col items-start gap-2">
                 <h1 className="text-3xl font-freeman">About</h1>
                 <em className="text-lg text-greyColor">I'm a versatile web and software developer from Nigeria, turning ideas into digital realities.</em>
                 {/* Icon Area */}
@@ -51,7 +51,7 @@ const FooterComponent = () => {
                     <li><Link href={"#about-section"} className="hover:text-primary transition-all ease-linear"  >→ About</Link></li>
                     <li><Link href={"#resume-section"} className="hover:text-primary transition-all ease-linear ">→ Resume</Link></li>
                     <li><Link href={"#skill-section"} className="hover:text-primary transition-all ease-linear"  >→ Skills</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear ">→ Projects</Link></li>
+                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear ">→ Services</Link></li>
                     <li><Link href={"#project-section"} className="hover:text-primary transition-all ease-linear ">→ Projects</Link></li>
                     <li><Link href={"#contact-section"} className="hover:text-primary transition-all ease-linear"  >→ Contact</Link></li>
                 </ul>
@@ -67,7 +67,7 @@ const FooterComponent = () => {
                     <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear" >→ Desktop App development</Link></li>
                 </ul>
             </div>
-            <div className="w-[25%] flex flex-col items-start gap-2">
+            <div className="lg:w-[25%] flex flex-col items-start gap-2">
                 <h1 className="text-3xl font-freeman">Have a question?</h1>
                 <div className="flex flex-col justify-center items-start gap-2 text-greyColor">
                     <Link href={"mailto:itzkellydaniel@gmail.com"} className="hover:text-primary transition-all ease-linear" > itzkellydaniel@gmail.com</Link>
