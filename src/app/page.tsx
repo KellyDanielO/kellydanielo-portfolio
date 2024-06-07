@@ -1,17 +1,24 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import MeImage from "../assets/images/me.png";
+import { LegacyRef, RefObject, useEffect, useRef, useState } from "react";
 import useIntersectionObserver from "./components/SectionObserver";
 import NavBar from "./components/NavBar";
 import FooterComponent from "./components/Footer";
-import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedinIn, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { MdEmail } from "react-icons/md";
+import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedinIn, FaTwitter, FaYoutube, FaInstagram, FaPhone, FaLocationArrow } from "react-icons/fa";
+import AppSvg from '../assets/svgs/app.svg'
+import FrontendSvg from '../assets/svgs/frontend.svg'
+import BackendSvg from '../assets/svgs/backend.svg'
+import SocialsSection from "./sections/SocialsSection";
+import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import ResumeSection from "./sections/ResumeSection";
 import ServiceSection from "./sections/ServiceSection";
 import SkillSection from "./sections/SkillSection";
 import ContactSection from "./sections/ContactSection";
-import HeroSection from "./sections/HeroSection";
-import SocialsSection from "./sections/SocialsSection";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>('home-section');
@@ -107,7 +114,7 @@ export default function Home() {
       <SocialsSection />
       <main className="min-h-screen bg-main w-full overflow-auto font-roboto">
         {/* Navigation Bar */}
-        <NavBar homeRef={homeRef} aboutRef={aboutRef} resumeRef={resumeRef} skillRef={skillRef} contactRef={contactRef} oberver={activeSection} serviceRef={serviceRef} />
+        <NavBar oberver={activeSection}/>
         {/* Navigation Bar ending */}
 
         {/* Hero section beginning */}
@@ -117,12 +124,9 @@ export default function Home() {
         {/* About Section */}
         <AboutSection />
         {/* End of about section */}
-       {/* Resume Section */}
-       <ResumeSection />
-       {/* End of resume section */}
-        {/* Service Section */}
+        <ResumeSection />
+        {/* Services Section */}
         <ServiceSection />
-        {/* End Service Section */}
 
         {/* Skill Section */}
         <SkillSection />
