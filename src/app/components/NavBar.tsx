@@ -68,7 +68,7 @@ const NavBar = ({oberver }: NavBarProps) => {
         break;
       case 'project-section':
         homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.add('active');
+        skillRef.current?.classList.remove('active');
         aboutRef.current?.classList.remove('active');
         resumeRef.current?.classList.remove('active');
         contactRef.current?.classList.remove('active');
@@ -105,7 +105,7 @@ const NavBar = ({oberver }: NavBarProps) => {
                 <li><Link href={"#resume-section"} className="nav-links" ref={resumeRef}>Resume</Link></li>
                 <li><Link href={"#service-section"} className="nav-links" ref={serviceRef}>Services</Link></li>
                 <li><Link href={"#skill-section"} className="nav-links" ref={skillRef}>Skills</Link></li>
-                <li><Link href={"#project-section"} className="nav-links">Projects</Link></li>
+                <li><Link href={"#project-section"} className="nav-links" ref={projectRef}>Projects</Link></li>
                 <li><Link href={"#contact-section"} className="nav-links" ref={contactRef}>Contact</Link></li>
                 {/* <li><Link href={""} className="nav-links">{oberver}</Link></li> */}
             </ul>

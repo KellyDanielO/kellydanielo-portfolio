@@ -19,6 +19,7 @@ import ResumeSection from "./sections/ResumeSection";
 import ServiceSection from "./sections/ServiceSection";
 import SkillSection from "./sections/SkillSection";
 import ContactSection from "./sections/ContactSection";
+import ProjectSection from "./sections/ProjectSection";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>('home-section');
@@ -32,106 +33,28 @@ export default function Home() {
 
   useIntersectionObserver(setActiveSection);
 
-  useEffect(() => {
-    switch (activeSection) {
-      case 'home-section':
-        homeRef.current?.classList.add('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      case 'about-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.add('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      case 'resume-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.add('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      case 'skill-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.add('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      case 'service-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.add('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      case 'project-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.add('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.add('active');
-        break;
-      case 'contact-section':
-        homeRef.current?.classList.remove('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.add('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-      default:
-        homeRef.current?.classList.add('active');
-        skillRef.current?.classList.remove('active');
-        aboutRef.current?.classList.remove('active');
-        resumeRef.current?.classList.remove('active');
-        contactRef.current?.classList.remove('active');
-        serviceRef.current?.classList.remove('active');
-        projectRef.current?.classList.remove('active');
-        break;
-    }
-  }, [activeSection]);
 
   return (
     <>
       <SocialsSection />
       <main className="min-h-screen bg-main w-full overflow-auto font-roboto">
         {/* Navigation Bar */}
-        <NavBar oberver={activeSection}/>
+        <NavBar oberver={activeSection} />
         {/* Navigation Bar ending */}
-
         {/* Hero section beginning */}
         <HeroSection />
         {/* Hero section ending */}
-
         {/* About Section */}
         <AboutSection />
         {/* End of about section */}
         <ResumeSection />
         {/* Services Section */}
         <ServiceSection />
-
         {/* Skill Section */}
         <SkillSection />
+        {/* Project Section */}
+        <ProjectSection />
         {/* Contact Section */}
-
         <ContactSection />
         {/* Footer Section Begin */}
         <FooterComponent />

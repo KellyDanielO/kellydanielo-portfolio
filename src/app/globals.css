@@ -169,3 +169,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #37e602;
 }
+.open{
+  color: white;
+  background: #37e602ba;
+}
