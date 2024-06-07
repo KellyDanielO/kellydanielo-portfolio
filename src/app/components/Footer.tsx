@@ -76,6 +76,6 @@ const FooterComponent = () => {
                 {/* Icon Area */}
             </div>
         </footer>
-        <h2 className="text-center text-greyColor text-sm py-2">Copyright ©2024 All rights reserved | Made with ❤️ by Kelly Daniel</h2></>
+        <h2 className="text-center text-greyColor text-sm pt-2 pb-20 px-5 lg:pb-5">Copyright ©2024 All rights reserved | Made with ❤️ by Kelly Daniel</h2></>
 }
 export default FooterComponent

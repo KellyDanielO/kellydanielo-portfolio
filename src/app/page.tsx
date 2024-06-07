@@ -411,7 +411,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full  flex justify-center items-center flex-col lg:flex-row ">
-            <div className="w-full lg:w-[30%] flex justify-center items-center lg:items-start h-[60vh] bg-shade p-5">
+            <div className="w-full md:w-full lg:w-[30%] flex justify-center items-center lg:items-start h-[60vh] bg-shade p-5">
               <Image
                 src={MeImage}
                 alt="Kelly Daniel"
