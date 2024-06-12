@@ -3,6 +3,7 @@ import AppProjectSection from "../components/project/AppProjectSection";
 import WebProjectSection from "../components/project/WebProjectSection";
 import DesktopProjectSection from "../components/project/DesktopProjectSection";
 import ApiProjectSection from "../components/project/ApiProjectSection";
+import Link from "next/link";
 
 const ProjectSection = () => {
     const appRef = useRef<HTMLDivElement>(null);
@@ -70,6 +71,7 @@ const ProjectSection = () => {
         </div>
         {/* display section */}
         {renderActiveTab()}
+        <Link href={""} className="uppercase py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-full" >See all projects</Link>
     </section>
 }
 
