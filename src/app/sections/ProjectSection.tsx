@@ -63,7 +63,7 @@ const ProjectSection = () => {
     return <section id="project-section" className="container-wrapper flex justify-center items-center flex-col py-20 lg:py-40 gap-2">
         <h1 className="font-freeman text-6xl">My Projects</h1>
         <p className="text-greyColor text-lg text-center lg:text-justify">Embrace every challenge, celebrate each achievement, and pursue your goals with unwavering dedication and strength.</p>
-        <div className="flex gap-x-4">
+        <div className="flex gap-4 flex-wrap">
             <div onClick={() => setActiveTab('app')} ref={appRef} className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/70 open">App</div>
             <div onClick={() => setActiveTab('website')} ref={websiteRef} className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/70">Website </div>
             <div onClick={() => setActiveTab('desktop')} ref={desktopRef} className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/70">Desktop</div>
@@ -71,7 +71,7 @@ const ProjectSection = () => {
         </div>
         {/* display section */}
         {renderActiveTab()}
-        <Link href={""} className="uppercase py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-full" >See all projects</Link>
+        <Link href={"/portfolio"} className="uppercase py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-full" >See all projects</Link>
     </section>
 }
 

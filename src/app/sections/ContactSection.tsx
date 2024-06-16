@@ -73,7 +73,7 @@ const ContactSection = () => {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="flex flex-col w-full lg:w-[40%] justify-around items-center pt-10 md:w-[60%] h-[60vh] bg-white/65 gap-3"
+                className="flex flex-col w-full lg:w-[40%] justify-around items-center pt-10 h-[60vh] bg-white/65 gap-3 md:w-full"
             >
                 {/* Full name */}
                 <div className=" px-5 w-full  ">

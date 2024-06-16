@@ -3,37 +3,35 @@ import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
-interface AppProjectCardProps {
+interface WebProjectCardProps {
     image: StaticImageData,
     title: string,
     description: string,
     stack: string[],
     github: string | null,
 }
-const AppProjectCard = ({ image, title, description, stack, github }: AppProjectCardProps) => {
+const WebProjectCard = ({ image, title, description, stack, github }: WebProjectCardProps) => {
     const openLink = (link: string) => {
         window.open(link, "_blank");
     };
     return <motion.div
 
-    initial={{ opacity: 0, scale: .8 }}
-    whileInView={{ opacity: 1, scale: 1 }}
-    viewport={{ once: false, amount: 0.25 }}
-    transition={{ duration: 0.5 }}
-        className="lg:w-[20%] mb-4 lg:mb-0 w-full flex justify-between  flex-col items-center cursor-pointer transition-all hover:shadow-lg p-2 rounded-xl"
+        initial={{ opacity: 0, scale: .8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.25 }}
+        transition={{ duration: 0.5 }}
+        className="lg:w-[49%] mb-4 lg:mb-0 w-full flex justify-between items-center  transition-all hover:shadow-lg p-2 rounded-xl gap-x-2 h-[50vh] lg:h-[27vh] flex-col lg:flex-row"
     >
         <Image
             src={image}
-            width={100}
-            height={100}
             alt="Onboarding screens Application"
-            className="cursor-default w-full md:h-[70vh] h-[50vh] lg:h-[45vh] object-contain"
+            className="cursor-default lg:w-[50%] h-full object-cover w-full" 
         />
-        <div className="w-full flex flex-col py-2  px-2 justify-center items-start gap-y-2" >
+        <div className="w-full flex flex-col py-2  px-2 justify-between items-start gap-y-2 h-full" >
             <h3 className="text-xl lg:text-2xl font-freeman text-primary">
                 {title}
             </h3>
-            <p>{description}...</p>
+            <p className="text-lg">{description}...</p>
             <div className="flex justify-between w-full items-center">
                 <div className="flex gap-2 flex-wrap">
                     {stack.map((tech, index) => (
@@ -54,8 +52,8 @@ const AppProjectCard = ({ image, title, description, stack, github }: AppProject
 
                 </div>
             </div>
+            <Link href={''} className="w-full text-center py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-lg">Read More </Link>
         </div>
-        <Link href={'/portfolio/project/kskcmlsmm'} className="w-full text-center py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-lg">Read More </Link>
     </motion.div>
 }
-export default AppProjectCard
+export default WebProjectCard

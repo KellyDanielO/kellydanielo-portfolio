@@ -23,13 +23,6 @@ import ProjectSection from "./sections/ProjectSection";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>('home-section');
-  const homeRef = useRef<HTMLAnchorElement>(null);
-  const aboutRef = useRef<HTMLAnchorElement>(null);
-  const resumeRef = useRef<HTMLAnchorElement>(null);
-  const contactRef = useRef<HTMLAnchorElement>(null);
-  const skillRef = useRef<HTMLAnchorElement>(null);
-  const serviceRef = useRef<HTMLAnchorElement>(null);
-  const projectRef = useRef<HTMLAnchorElement>(null);
 
   useIntersectionObserver(setActiveSection);
 

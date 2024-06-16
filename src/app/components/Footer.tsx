@@ -47,24 +47,24 @@ const FooterComponent = () => {
             <div className="flex flex-col justify-center items-start gap-2">
                 <h1 className="text-3xl font-freeman">Links</h1>
                 <ul className="flex flex-col justify-center items-start text-sm gap-2 text-greyColor">
-                    <li><Link href={"#home-section"} className="hover:text-primary transition-all ease-linear"  >→ Home</Link></li>
-                    <li><Link href={"#about-section"} className="hover:text-primary transition-all ease-linear"  >→ About</Link></li>
-                    <li><Link href={"#resume-section"} className="hover:text-primary transition-all ease-linear ">→ Resume</Link></li>
-                    <li><Link href={"#skill-section"} className="hover:text-primary transition-all ease-linear"  >→ Skills</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear ">→ Services</Link></li>
-                    <li><Link href={"#project-section"} className="hover:text-primary transition-all ease-linear ">→ Projects</Link></li>
-                    <li><Link href={"#contact-section"} className="hover:text-primary transition-all ease-linear"  >→ Contact</Link></li>
+                    <li><Link href={"/#home-section"} className="hover:text-primary transition-all ease-linear"  >→ Home</Link></li>
+                    <li><Link href={"/#about-section"} className="hover:text-primary transition-all ease-linear"  >→ About</Link></li>
+                    <li><Link href={"/#resume-section"} className="hover:text-primary transition-all ease-linear ">→ Resume</Link></li>
+                    <li><Link href={"/#skill-section"} className="hover:text-primary transition-all ease-linear"  >→ Skills</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear ">→ Services</Link></li>
+                    <li><Link href={"/#project-section"} className="hover:text-primary transition-all ease-linear ">→ Projects</Link></li>
+                    <li><Link href={"/#contact-section"} className="hover:text-primary transition-all ease-linear"  >→ Contact</Link></li>
                 </ul>
             </div>
             {/* Servies */}
             <div className="flex flex-col justify-center items-start gap-2">
                 <h1 className="text-3xl font-freeman">Servies</h1>
                 <ul className="flex flex-col justify-center items-start text-sm gap-2 text-greyColor">
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear" >→ Full stack website</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear" >→ Front-end</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear">→ Back-end</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear" >→ Mobile App development</Link></li>
-                    <li><Link href={"#service-section"} className="hover:text-primary transition-all ease-linear" >→ Desktop App development</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear" >→ Full stack website</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear" >→ Front-end</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear">→ Back-end</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear" >→ Mobile App development</Link></li>
+                    <li><Link href={"/#service-section"} className="hover:text-primary transition-all ease-linear" >→ Desktop App development</Link></li>
                 </ul>
             </div>
             <div className="lg:w-[25%] flex flex-col items-start gap-2">
