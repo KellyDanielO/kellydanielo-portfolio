@@ -4,14 +4,30 @@ import NavBar from "@/app/components/NavBar"
 import useIntersectionObserver from "@/app/components/SectionObserver";
 import SocialsSection from "@/app/sections/SocialsSection"
 import Link from "next/link";
-import { useState } from "react";
-import Image1 from '@/assets/images/1-web -app.png'
-import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import { Project, getProjectById } from "@/app/functions/firebase_functions";
+import { FaGithub, FaShare } from "react-icons/fa";
 
-const SingleProject = () => {
+function SingleProject({ params }: { params: { id: string } }) {
 
+    const [projectData, setSpecificProject] = useState<Project | null>(null);
+
+    useEffect(() => {
+
+        const fetchSpecificProject = async (projectId: string) => {
+            const projectData = await getProjectById(projectId) as Project;
+            if (projectData) {
+
+                setSpecificProject(projectData);
+            }
+        };
+        fetchSpecificProject(params.id);
+    }, []);
     const [activeSection, setActiveSection] = useState<string>('home-section');
-
+    const openLink = (link: string) => {
+        window.open(link, "_blank");
+    };
     useIntersectionObserver(setActiveSection);
     return <>
         <SocialsSection />
@@ -24,40 +40,61 @@ const SingleProject = () => {
                     <div className="flex items-center justify-center gap-2 text-sm lg:text-xl flex-wrap">
                         <Link href={"/portfolio"} className="bg-shade text-foreground rounded-full py-1 px-3 cursor-pointer">Portfolio</Link>
                         /
-                        <Link href={"/portfolio/project/cnsscn"} className="bg-shade text-foreground rounded-full py-1 px-3 cursor-pointer">Welcome to the personalization economy</Link>
+                        <Link href={`/portfolio/project/${params.id}`} className="bg-shade text-foreground rounded-full py-1 px-3 cursor-pointer">{projectData != null ? projectData.title : 'Loading...'}</Link>
                         /
                     </div>
                 </div>
-                <div className="w-full flex lg:h-[60vh] gap-3 lg:gap-0 pt-10 flex-col justify-between lg:flex-row">
+                {projectData?.youtubeUrl && (<div className="w-full flex lg:h-[60vh] gap-3 lg:gap-0 pt-10 flex-col justify-between lg:flex-row">
                     <div className="w-full lg:w-[60%] h-[60%] lg:h-auto ">
-                        <iframe className="w-full h-[30vh] lg:h-full" src="https://www.youtube.com/embed/UNtNzdfwfJw?si=-C2ixUM6BEE7AkMS" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                        <iframe className="w-full h-[30vh] lg:h-full" src={projectData.youtubeUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
-                </div>
+                </div>)}
+
                 <div className="flex flex-col my-2 gap-5 lg:max-w-[80%]">
-                    <h1 className="text-3xl lg:text-5xl font-medium font-freeman">Welcome to the personalization economy</h1>
+                    <h1 className="text-3xl lg:text-5xl font-medium font-freeman">{projectData?.title}</h1>
                     <h3 className="text-3xl lg:text-2xl font-medium">Overview</h3>
-                    <p className="text-sm lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas totam deserunt, dolore optio nostrum ullam. Autem, ab vitae iure perspiciatis officia eius ipsa praesentium mollitia nihil alias? Recusandae totam ullam atque, facilis, rem doloremque quasi ducimus quibusdam mollitia enim itaque odit vero placeat fuga consequuntur esse culpa reiciendis saepe ratione quia sit iste eos non delectus! Veniam eos reprehenderit perspiciatis praesentium officiis quisquam aut tempora explicabo culpa ipsam voluptas molestias nisi molestiae libero placeat qui, neque unde! Quos magnam facilis sapiente aperiam commodi eius facere, voluptas itaque doloribus autem amet ullam expedita tenetur est tempora. Distinctio harum excepturi voluptatum cum.</p>
+                    <p className="text-sm lg:text-xl" dangerouslySetInnerHTML={{ __html: projectData?.description || '' }} />
+                    <div className="flex gap-4">
+                    {projectData?.githubUrl && (
+                        <FaGithub
+                            className="text-xl cursor-pointer hover:text-primary"
+                            onClick={() =>
+                                openLink(
+                                    projectData?.githubUrl || ''
+                                )
+                            }
+                        />
+                    )}
+                    {projectData?.liveUrl && (
+                        <FaShare
+                            className="text-xl cursor-pointer hover:text-primary"
+                            onClick={() =>
+                                openLink(
+                                    projectData?.liveUrl || ''
+                                )
+                            }
+                        />
+                    )}
+
+                </div>
                 </div>
                 <div className="flex flex-col my-2 gap-5 lg:max-w-[80%]">
                     <h1 className="text-3xl lg:text-5xl font-medium font-freeman">Featured Image(s)</h1>
                     <div className="w-full flex flex-wrap gap-5">
-                        <Image
-                            src={Image1}
-                            alt="Onboarding screens Application"
-                            className="cursor-default lg:max-w-[46%] w-full max-h-[70vh] object-contain"
-                        />
-                        <Image
-                            src={Image1}
-                            alt="Onboarding screens Application"
-                            className="cursor-default lg:max-w-[46%] w-full max-h-[70vh] object-contain"
-                        />
-                        <Image
-                            src={Image1}
-                            alt="Onboarding screens Application"
-                            className="cursor-default lg:max-w-[46%] w-full max-h-[70vh] object-contain"
-                        />
+                       
+                        {projectData?.images && (projectData?.images.map((image, index) => (
+                            // <div key={index} className="bg-shade py-1 px-3 rounded-full cursor-pointer hover:bg-primary/70 text-sm">{tech}</div>
+                            <Image
+                                key={index}
+                                src={image}
+                                width={500}
+                                height={500}
+                                alt={projectData.title}
+                                className="cursor-default lg:max-w-[46%] w-full max-h-[70vh] object-contain"
+                            />
+                        )))}
                     </div>
-
                 </div>
             </section>
         </main>

@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ApiProjectSection from "../components/project/ApiProjectSection";
 import AppProjectSection from "../components/project/AppProjectSection";
 import DesktopProjectSection from "../components/project/DesktopProjectSection";
@@ -9,6 +9,7 @@ import SocialsSection from "../sections/SocialsSection";
 import NavBar from "../components/NavBar";
 import useIntersectionObserver from "../components/SectionObserver";
 import FooterComponent from "../components/Footer";
+import { Project, getAllProjectsByCategoryOrdered } from "../functions/firebase_functions";
 
 
 const PortfolioPage = () => {
@@ -19,21 +20,38 @@ const PortfolioPage = () => {
 
     const [activeSection, setActiveSection] = useState<string>('home-section');
 
+    const [appProjects, setAppProjects] = useState<Project[]>([]);
+    const [webProjects, setWebProjects] = useState<Project[]>([]);
+    const [apiProjects, setApiProjects] = useState<Project[]>([]);
+    const [desktopProjects, setDesktopProjects] = useState<Project[]>([]);
+
     useIntersectionObserver(setActiveSection);
     const renderActiveTab = () => {
         switch (activeTab) {
             case 'app':
-                return <AppProjectSection />;
+                return <AppProjectSection projects={appProjects} />;
             case 'website':
-                return <WebProjectSection />;
+                return <WebProjectSection  projects={webProjects} />;
             case 'desktop':
-                return <DesktopProjectSection />;
+                return <DesktopProjectSection  projects={desktopProjects}  />;
             case 'api':
-                return <ApiProjectSection />;
+                return <ApiProjectSection projects={apiProjects} />;
             default:
-                return <AppProjectSection />;
+                return <AppProjectSection projects={appProjects} />;
         }
     };
+    useEffect(() => {
+        const fetchTopProjects = async () => {
+            const topProjectsData = await getAllProjectsByCategoryOrdered();
+            if (topProjectsData) {
+                setAppProjects(topProjectsData['app'] || []);
+                setWebProjects(topProjectsData['web'] || []);
+                setApiProjects(topProjectsData['api'] || []);
+                setDesktopProjects(topProjectsData['desktop'] || []);
+            }
+        };
+        fetchTopProjects();
+    }, []);
     const [activeTab, setActiveTab] = useState<string>('app');
 
     switch (activeTab) {
@@ -41,6 +59,7 @@ const PortfolioPage = () => {
             appRef.current?.classList.add('open')
             websiteRef.current?.classList.remove('open')
             apiRef.current?.classList.remove('open')
+            desktopRef.current?.classList.remove('open')
             break;
         case 'website':
             appRef.current?.classList.remove('open')

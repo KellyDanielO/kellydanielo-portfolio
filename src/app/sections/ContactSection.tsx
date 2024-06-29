@@ -14,21 +14,24 @@ const ContactSection = () => {
     const messageRef: RefObject<HTMLTextAreaElement> =
         useRef<HTMLTextAreaElement>(null);
     const [loading, setLoading] = useState(false);
-    const publicKey = "user_j9YNgCviV2OlwriYmRWPk";
-    const templateId = "template_jcxprnp";
-    const serviceId = "service_ek5fby6";
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const email = process.env.NEXT_PUBLIC_USER_EMAIL;
+
+    
     const handleSubmit = async (e: any) => {
         e.preventDefault();
         try {
             setLoading(true);
             await emailjs.send(`${serviceId}`, `${templateId}`, {
                 to_name: nameRef.current !== null ? nameRef.current.value : "",
-                recipient: emailRef.current !== null ? emailRef.current.value : "",
-                message: messageRef.current !== null ? messageRef.current.value : "",
+                recipient: email,
+                message: messageRef.current !== null ? `Email: ${emailRef.current?.value}\n` +  messageRef.current.value : "",
             });
             alert("Email successfully");
         } catch (error) {
-            console.log(error);
+            console.error(error);
         } finally {
             setLoading(false);
         }
@@ -36,6 +39,7 @@ const ContactSection = () => {
     return <section id="contact-section" className="container-wrapper flex justify-between items-center py-20 flex-col gap-3 ">
         <h1 className="font-freeman text-6xl">Contact Me</h1>
         <p className="text-greyColor text-lg text-center lg:text-justify">Let's connect and explore how we can create impactful digital experiences together.</p>
+
         <div className="flex items-center justify-center gap-x-16 py-5 flex-col lg:flex-row gap-y-5">
             {/* Email */}
             <div className="flex justify-center items-center gap-3 flex-col">

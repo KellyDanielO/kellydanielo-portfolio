@@ -4,6 +4,7 @@ import WebProjectSection from "../components/project/WebProjectSection";
 import DesktopProjectSection from "../components/project/DesktopProjectSection";
 import ApiProjectSection from "../components/project/ApiProjectSection";
 import Link from "next/link";
+import { Project, getTopProjectsByCategory } from "../functions/firebase_functions";
 
 const ProjectSection = () => {
     const appRef = useRef<HTMLDivElement>(null);
@@ -11,22 +12,41 @@ const ProjectSection = () => {
     const apiRef = useRef<HTMLDivElement>(null);
     const desktopRef = useRef<HTMLDivElement>(null);
 
+
+    const [appProjects, setAppProjects] = useState<Project[]>([]);
+    const [webProjects, setWebProjects] = useState<Project[]>([]);
+    const [apiProjects, setApiProjects] = useState<Project[]>([]);
+    const [desktopProjects, setDesktopProjects] = useState<Project[]>([]);
+
     const renderActiveTab = () => {
         switch (activeTab) {
             case 'app':
-                return <AppProjectSection />;
+                return <AppProjectSection projects={appProjects} />;
             case 'website':
-                return <WebProjectSection />;
+                return <WebProjectSection  projects={webProjects} />;
             case 'desktop':
-                return <DesktopProjectSection />;
+                return <DesktopProjectSection  projects={desktopProjects}  />;
             case 'api':
-                return <ApiProjectSection />;
+                return <ApiProjectSection projects={apiProjects} />;
             default:
-                return <AppProjectSection />;
+                return <AppProjectSection projects={appProjects} />;
         }
     };
     const [activeTab, setActiveTab] = useState<string>('app');
+    useEffect(() => {
+        const fetchTopProjects = async () => {
+            const topProjectsData = await getTopProjectsByCategory();
 
+            if (topProjectsData) {
+                setAppProjects(topProjectsData['app'] || []);
+                setWebProjects(topProjectsData['web'] || []);
+                setApiProjects(topProjectsData['api'] || []);
+                setDesktopProjects(topProjectsData['desktop'] || []);
+            }
+        };
+
+        fetchTopProjects();
+    }, []);
     switch (activeTab) {
         case 'app':
             appRef.current?.classList.add('open')
@@ -59,7 +79,7 @@ const ProjectSection = () => {
             break;
 
     }
-    
+
     return <section id="project-section" className="container-wrapper flex justify-center items-center flex-col py-20 lg:py-40 gap-2">
         <h1 className="font-freeman text-6xl">My Projects</h1>
         <p className="text-greyColor text-lg text-center lg:text-justify">Embrace every challenge, celebrate each achievement, and pursue your goals with unwavering dedication and strength.</p>

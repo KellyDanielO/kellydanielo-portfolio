@@ -31,7 +31,7 @@ const AboutSection = () => {
                 <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/70">MySQL</div>
                 <div className="bg-shade py-2 px-4 rounded-full cursor-pointer hover:bg-primary/70">Postgress</div>
             </div>
-            <Link href={""} className="uppercase py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-full" >Download CV</Link>
+            <Link href={"https://drive.google.com/file/d/1x_6XfDBoeRIkUlGGuVyZGrDo1_tuZmzG/view?usp=sharing"} className="uppercase py-3 px-5 bg-shade hover:bg-primary/70 transition-all ease-in font-freeman rounded-full" >Download CV</Link>
         </div>
     </section>
 }

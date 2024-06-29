@@ -1,16 +1,26 @@
 import Image1 from '../../../assets/images/3-web .jpg'
 import { motion } from "framer-motion"
 import WebProjectCard from "../WebProjectCard"
+import { Project } from '@/app/functions/firebase_functions';
 
-const DesktopProjectSection = () => {
+interface ProjectsListProps {
+    projects: Project[];
+}
+const DesktopProjectSection: React.FC<ProjectsListProps> = ({ projects }) => {
     return <motion.div
-        // initial={{ opacity: 0 }}
-        // whileInView={{ opacity: 1 }}
-        // viewport={{ once: false, amount: 0.25 }}
-        // transition={{ duration: 0.5 }}
-        className="w-full flex gap-5 flex-wrap justify-between items-center">
-        <WebProjectCard image={Image1} title={"Visa"} description={"just flutter jkwdnknsckjkdjd swccnsln dnkdnkkdjoj"} stack={['Flutter']} github={null} />
+        className="w-full flex gap-x-5 gap-y-16 flex-wrap justify-between items-center">
+        {projects.length > 0 ? (
+            <>
+                {projects.map(project => {
+                    let stacks: string[] = project.stack!.split(' ')
+                    let bio: string = project.description.substring(0, 120)
+                    return <WebProjectCard key={project.id} image={project.images != undefined ? project.images[0] : ''} title={project.title} description={bio} stack={stacks} github={project.githubUrl || null} id={project.id} isTop={project.isTopProject} liveLink={project.liveUrl || null} />
 
+                })}
+            </>
+        ) : (
+            <p>Loading...</p>
+        )}
     </motion.div>
 }
 
