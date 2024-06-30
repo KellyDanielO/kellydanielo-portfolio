@@ -1,17 +1,8 @@
 "use client"
-import Image from "next/image";
-import Link from "next/link";
-import MeImage from "../assets/images/me.png";
-import { LegacyRef, RefObject, useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import useIntersectionObserver from "./components/SectionObserver";
 import NavBar from "./components/NavBar";
 import FooterComponent from "./components/Footer";
-import emailjs from "@emailjs/browser";
-import { MdEmail } from "react-icons/md";
-import { FaFacebook, FaWhatsapp, FaGithub, FaLinkedinIn, FaTwitter, FaYoutube, FaInstagram, FaPhone, FaLocationArrow } from "react-icons/fa";
-import AppSvg from '../assets/svgs/app.svg'
-import FrontendSvg from '../assets/svgs/frontend.svg'
-import BackendSvg from '../assets/svgs/backend.svg'
 import SocialsSection from "./sections/SocialsSection";
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
