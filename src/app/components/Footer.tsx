@@ -7,7 +7,7 @@ const FooterComponent = () => {
     };
     return <>
 
-        <footer className="container-wrapper py-5  flex justify-between items-start flex-col lg:flex-row gap-5 pb-10">
+        <footer className="container-wrapper bg-main  text-white py-5  flex justify-between items-start flex-col lg:flex-row gap-5 pb-10">
             <div className="lg:w-[25%] flex flex-col items-start gap-2">
                 <h1 className="text-3xl font-freeman">About</h1>
                 <em className="text-lg text-greyColor">I'm a versatile web and software developer from Nigeria, turning ideas into digital realities.</em>

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <SocialsSection />
-      <main className="min-h-screen bg-main w-full overflow-auto font-roboto">
+      <main className="min-h-screen  text-white bg-main w-full overflow-auto font-roboto">
         {/* Navigation Bar */}
         <NavBar oberver={activeSection} />
         {/* Navigation Bar ending */}

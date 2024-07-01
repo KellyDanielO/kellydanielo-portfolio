@@ -31,9 +31,9 @@ const PortfolioPage = () => {
             case 'app':
                 return <AppProjectSection projects={appProjects} />;
             case 'website':
-                return <WebProjectSection  projects={webProjects} />;
+                return <WebProjectSection projects={webProjects} />;
             case 'desktop':
-                return <DesktopProjectSection  projects={desktopProjects}  />;
+                return <DesktopProjectSection projects={desktopProjects} />;
             case 'api':
                 return <ApiProjectSection projects={apiProjects} />;
             default:
@@ -90,7 +90,7 @@ const PortfolioPage = () => {
 
     return <>
         <SocialsSection />
-        <main className="min-h-screen bg-main w-full overflow-auto font-roboto">
+        <main className="min-h-screen bg-main  text-white w-full overflow-auto font-roboto">
             {/* Navigation Bar */}
             <NavBar oberver={activeSection} />
 
@@ -106,10 +106,10 @@ const PortfolioPage = () => {
                 {/* display section */}
                 {renderActiveTab()}
             </section>
+            {/* Footer Section Begin */}
+            <FooterComponent />
+            {/* Footer Section End */}
         </main>
-        {/* Footer Section Begin */}
-        <FooterComponent />
-        {/* Footer Section End */}
     </>
 }
 
