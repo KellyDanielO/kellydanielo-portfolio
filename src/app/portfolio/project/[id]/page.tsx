@@ -31,7 +31,7 @@ function SingleProject({ params }: { params: { id: string } }) {
     useIntersectionObserver(setActiveSection);
     return <>
         <SocialsSection />
-        <main className="min-h-screen bg-main w-full overflow-auto font-roboto">
+        <main className="min-h-screen bg-main w-full overflow-auto font-roboto text-white">
             {/* Navigation Bar */}
             <NavBar oberver={activeSection} />
 

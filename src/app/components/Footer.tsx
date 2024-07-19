@@ -71,7 +71,7 @@ const FooterComponent = () => {
                 <h1 className="text-3xl font-freeman">Have a question?</h1>
                 <div className="flex flex-col justify-center items-start gap-2 text-greyColor">
                     <Link href={"mailto:itzkellydaniel@gmail.com"} className="hover:text-primary transition-all ease-linear" > itzkellydaniel@gmail.com</Link>
-                    <Link href={"tel:+2348067081323"} className="hover:text-primary transition-all ease-linear" >+234-80-6708-1323</Link>
+                    <Link href={"tel:+2347077962564"} className="hover:text-primary transition-all ease-linear" >+234-70-7796-2564</Link>
                 </div>
                 {/* Icon Area */}
             </div>
