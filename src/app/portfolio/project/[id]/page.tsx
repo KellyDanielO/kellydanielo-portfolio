@@ -97,10 +97,10 @@ function SingleProject({ params }: { params: { id: string } }) {
                     </div>
                 </div>
             </section>
+            {/* Footer Section Begin */}
+            <FooterComponent />
+            {/* Footer Section End */}
         </main>
-        {/* Footer Section Begin */}
-        <FooterComponent />
-        {/* Footer Section End */}
     </>
 }
 
